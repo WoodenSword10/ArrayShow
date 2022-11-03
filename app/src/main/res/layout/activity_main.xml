@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="数据"/>
+
+        <TextView
+            android:id="@+id/cs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:text="图示"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="0dp"
+        android:layout_weight="15">
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            >-->
+<!--            <TableRow>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev1"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev5"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev9"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--            </TableRow>-->
+<!--            <TableRow>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev2"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"-->
+<!--                    />-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev6"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev10"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--            </TableRow>-->
+<!--            <TableRow>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev3"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev7"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev11"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--            </TableRow>-->
+<!--            <TableRow>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev4"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev8"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--                <EditText-->
+<!--                    android:text="0"-->
+<!--                    android:id="@+id/ev12"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="center"/>-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="蓝牙状态："
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="未连接"
+                    android:textColor="@color/purple_200"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:text="蓝牙"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="压力映射"
+                    android:layout_margin="2dp" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="密码锁"
+                    android:layout_margin="2dp" />
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="2">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et1"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:inputType="number"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:gravity="center"/>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/btn4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="重置"-->
+<!--                        android:layout_margin="1dp"/>-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/btn5"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="进入"-->
+<!--                        android:layout_margin="1dp"/>-->
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/black"
+        />
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:cardBackgroundColor="@color/white"-->
+<!--        app:cardElevation="10dp"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:layout_marginRight="16dp"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="50"-->
+<!--        android:layout_marginBottom="20dp">-->
+
+<!--        <WebView-->
+<!--            android:id="@+id/webView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            />-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_weight="50"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="20dp">
+
+        <FrameLayout
+            android:id="@+id/fragments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

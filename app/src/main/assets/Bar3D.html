@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/echarts.js"></script>
+    <script src="./js/echarts-gl.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <title>cs</title>
+</head>
+<body>
+<div class="w-100 text-center" style="height: 280px;" id="3Dbar"></div>
+<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById('3Dbar'));
+			// prettier-ignore
+			var x = ['1', '2', '3'];
+			// prettier-ignore
+			var y = ['1', '2', '3', '4'];
+			// prettier-ignore
+			var data = [[0, 0, 0], [0, 1, 0], [0, 2, 0],
+						[1, 0, 0], [1, 1, 0], [1, 2, 0],
+						[2, 0, 0], [2, 1, 0], [2, 2, 0],
+						[3, 0, 0], [3, 1, 0], [3, 2, 0], ]
+			option = {
+				tooltip: {
+                    // show:true
+                },
+                // toolbox: {
+                //     show: true,
+                //     showTitle: false, // 隐藏默认文字，否则两者位置会重叠
+                //     feature: {
+                //         saveAsImage: {
+                //             show: true,
+                //             title: 'Save As Image'
+                //         },
+                //     },
+                // },
+				// visualMap: {
+				// 	max: 500,
+					// inRange: {
+					// 	color: [
+					// 		'#313695',
+					// 		'#4575b4',
+					// 		'#74add1',
+					// 		'#abd9e9',
+					// 		'#e0f3f8',
+					// 		'#ffffbf',
+					// 		'#fee090',
+					// 		'#fdae61',
+					// 		'#f46d43',
+					// 		'#d73027',
+					// 		'#a50026'
+					// 	]
+					// }
+				// },
+				xAxis3D: {
+					type: 'category',
+					data: x
+				},
+				yAxis3D: {
+					type: 'category',
+					data: y
+				},
+				zAxis3D: {
+					type: 'value',
+					max: 800
+				},
+				grid3D: {
+					boxWidth: 200,
+					boxDepth: 80,
+					light: {
+						main: {
+							intensity: 1.2
+						},
+						ambient: {
+							intensity: 0.3
+						}
+					}
+				},
+				series: [
+					{
+						type: 'bar3D',
+						data: data.map(function (item) {
+							return {
+								value: [item[1], item[0], item[2]]
+							};
+						}),
+						shading: 'color',
+						left: '5%',
+						right: '5%',
+						top: '5%',
+						bottom: '5%',
+						label: {
+							show: false,
+							fontSize: 16,
+							borderWidth: 1
+						},
+						itemStyle: {
+							opacity: 0.4
+						},
+						emphasis: {
+							label: {
+								fontSize: 20,
+								color: '#900'
+							},
+							itemStyle: {
+								color: '#900'
+							}
+						}
+					}
+				]
+			};
+			myChart.setOption(option);
+
+            function setValue(a){
+                data = [[0, 0, a[0]], [1, 0, a[4]], [2, 0, a[8]],
+						[0, 1, a[1]], [1, 1, a[5]], [2, 1, a[9]],
+						[0, 2, a[2]], [1, 2, a[6]], [2, 2, a[10]],
+						[0, 3, a[3]], [1, 3, a[7]], [2, 3, a[11]], ]
+                option.series[0].data = data;
+                myChart.setOption(option);
+            }
+		</script>
+</body>
+</html>
